@@ -9,14 +9,13 @@ const ShopContextProvider = (props) => {
 
     const currency = '₹';
     const delivery_fee = 10;
-    // const backendUrl = import.meta.env.VITE_BACKEND_URL;
-    const backendUrl = "http://localhost:4000";
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
     const [products, setProducts] = useState([]);
-    const [fabrics, setFabric] = useState([]);
+    // const [fabrics, setFabric] = useState([]);
     const [token, setToken] = useState('');
 
     const navigate = useNavigate();
@@ -119,23 +118,23 @@ const ShopContextProvider = (props) => {
         }
     }
     
-    const getFabricsData = async () => {
-        try {
+    // const getFabricsData = async () => {
+    //     try {
 
-            const response = await axios.get(backendUrl + '/api/fabric/list');
+    //         const response = await axios.get(backendUrl + '/api/fabric/list');
 
-            if (response.data.success) {
-                setFabric(response.data.fabrics);
-            }
-            else {
-                console.log(error);
-                toast.error(response.data.message);
-            }
-        } catch (error) {
-            console.log(error);
-            toast.error(error.message);
-        }
-    }
+    //         if (response.data.success) {
+    //             setFabric(response.data.fabrics);
+    //         }
+    //         else {
+    //             console.log(error);
+    //             toast.error(response.data.message);
+    //         }
+    //     } catch (error) {
+    //         console.log(error);
+    //         toast.error(error.message);
+    //     }
+    // }
 
 
     const getUserCart = async (token) => {
@@ -160,9 +159,9 @@ const ShopContextProvider = (props) => {
         getProductsData();
     }, []);
 
-    useEffect(() => {
-        getFabricsData();
-    }, []);
+    // useEffect(() => {
+    //     getFabricsData();
+    // }, []);
 
     useEffect(() => {
         if (!token && localStorage.getItem('token')) {
@@ -191,8 +190,8 @@ const ShopContextProvider = (props) => {
         backendUrl,
         token,
         setToken,
-        fabrics,
-        getFabricsData
+        // fabrics,
+        // getFabricsData
     }
 
     return (
