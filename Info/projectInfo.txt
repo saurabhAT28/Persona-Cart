@@ -28,27 +28,3 @@ Command to run admin panel: npm run dev (5174)
 ****************************************************************************
 
 
-****************************************************************************
-
-mongo project name: Persona Cart
-mongodb username: saurabhtribhuvan28
-mongodb password: INw6aypo77Ot9ccm
-mongodb connection string: mongodb+srv://saurabhtribhuvan28:INw6aypo77Ot9ccm@cluster0.ilv3j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-****************************************************************************
-
-
-****************************************************************************
-
-Cloudinary login email: saurabhtribhuvan28@gmail.com
-
-****************************************************************************
-
-
-**************************** OLD CLOUDINARY KEY ****************************
-
-# CLOUDINARY_API_KEY="175779575988721"
-# CLOUDINARY_API_SECRET="NN99mw3cxs3Jkb55rK9BbhT-cyc"
-# CLOUDINARY_NAME="dpc4f1gcm"
-
-****************************************************************************
